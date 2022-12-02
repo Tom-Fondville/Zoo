@@ -23,8 +23,6 @@ public class Infrastructure {
         this.listAnimaux = new ArrayList<Animal>();
     }
 
-    //TODO -- AddAnimalToInfrastructure
-
     public int getSurface() {
         return surface;
     }

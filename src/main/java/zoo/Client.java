@@ -21,7 +21,6 @@ public class Client {
     }
 
     //TODO -- Enum pour les tarifs ?
-    //TODO -- AddInfrastructureVisiteToClient
 
     public long getId() {
         return id;

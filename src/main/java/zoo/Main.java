@@ -14,10 +14,14 @@ public class Main {
 
         Zoo zoo = new Zoo("MonZoo");
 
-        System.out.println(crocodile.toString());
-        System.out.println(client1.toString());
-        System.out.println(employe1.toString());
-        System.out.println(serreAmazonienne.toString());
+        System.out.println(crocodile);
+        System.out.println(client1);
+        System.out.println(employe1);
+        System.out.println(serreAmazonienne);
+
+        employe1.getAnimaux().add(crocodile);
+
+        System.out.println(employe1);
 
 
 
