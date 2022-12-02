@@ -12,13 +12,16 @@ public class Client {
     private BigDecimal benefice;
     private ArrayList<Infrastructure> infrastructureVisitee;
 
-    public Client(long id, BigDecimal tarif, int dureeSejour, ArrayList<Infrastructure> infrastructureVisitee) {
+    public Client(long id, BigDecimal tarif, int dureeSejour) {
         this.id = id;
         this.tarif = tarif;
         this.dureeSejour = dureeSejour;
-        this.infrastructureVisitee = infrastructureVisitee;
+        this.infrastructureVisitee = new ArrayList<Infrastructure>();
         this.benefice = this.tarif.multiply(new BigDecimal(this.dureeSejour)) ;
     }
+
+    //TODO -- Enum pour les tarifs ?
+    //TODO -- AddInfrastructureVisiteToClient
 
     public long getId() {
         return id;
@@ -53,7 +56,14 @@ public class Client {
     }
 
 
-
-
-
+    @Override
+    public String toString() {
+        return "Client{" +
+                "id=" + id +
+                ", tarif=" + tarif +
+                ", dureeSejour=" + dureeSejour +
+                ", benefice=" + benefice +
+                ", infrastructureVisitee=" + infrastructureVisitee +
+                '}';
+    }
 }
