@@ -10,13 +10,14 @@ public class Employe {
     private ArrayList<Animal> animaux;
 
 
-    public Employe(String nom, String prenom, int matricule, ArrayList<Animal> animaux) {
+    public Employe(String nom, String prenom, int matricule) {
         this.nom = nom;
         this.prenom = prenom;
         this.matricule = matricule;
-        this.animaux = animaux;
+        this.animaux = new ArrayList<Animal>();
     }
 
+    //TODO -- AddAnimalsToEmploye
     public String getNom() {
         return nom;
     }
@@ -47,5 +48,16 @@ public class Employe {
 
     public void setAnimaux(ArrayList<Animal> animaux) {
         this.animaux = animaux;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Employe{" +
+                "nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", matricule=" + matricule +
+                ", animaux=" + animaux +
+                '}';
     }
 }

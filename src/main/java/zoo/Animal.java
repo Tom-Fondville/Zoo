@@ -1,20 +1,26 @@
 package zoo;
 
 public class Animal {
+    private String nom;
 
+    private String nomScientifique;
+
+    //En KG
     private double masse;
+    //en M
     private double taille;
 
     private String sexe;
     private Vulnerabilite niveauDeVulnerabilite;
     private Infrastructure infrastructure;
 
-    public Animal(double masse, double taille, String sexe, Vulnerabilite niveauDeVulnerabilite, Infrastructure infrastructure) {
+    public Animal(String nom, String nomScientifique, double masse, double taille, String sexe, Vulnerabilite niveauDeVulnerabilite) {
+        this.nom = nom;
+        this.nomScientifique = nomScientifique;
         this.masse = masse;
         this.taille = taille;
         this.sexe = sexe;
         this.niveauDeVulnerabilite = niveauDeVulnerabilite;
-        this.infrastructure = infrastructure;
     }
 
     public String getSexe() {
@@ -62,5 +68,34 @@ public class Animal {
 
     public void setInfrastructure(Infrastructure infrastructure) {
         this.infrastructure = infrastructure;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getNomScientifique() {
+        return nomScientifique;
+    }
+
+    public void setNomScientifique(String nomScientifique) {
+        this.nomScientifique = nomScientifique;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                " nom=" + nom +
+                ", nom Scientifique=" + nomScientifique +
+                ", masse=" + masse +
+                ", taille=" + taille +
+                ", sexe='" + sexe + '\'' +
+                ", niveauDeVulnerabilite=" + niveauDeVulnerabilite +
+                '}';
     }
 }
