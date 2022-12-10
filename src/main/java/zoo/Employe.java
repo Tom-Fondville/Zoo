@@ -1,5 +1,6 @@
 package zoo;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 public class Employe {
@@ -7,17 +8,18 @@ public class Employe {
     private String nom;
     private String prenom;
     private int matricule;
+    private BigDecimal salaire;
     private ArrayList<Animal> animaux;
 
 
-    public Employe(String nom, String prenom, int matricule) {
+    public Employe(String nom, String prenom, int matricule, BigDecimal salaire) {
         this.nom = nom;
         this.prenom = prenom;
         this.matricule = matricule;
+        this.salaire = salaire;
         this.animaux = new ArrayList<Animal>();
     }
 
-    //TODO -- AddAnimalsToEmploye
     public String getNom() {
         return nom;
     }
@@ -42,6 +44,14 @@ public class Employe {
         this.matricule = matricule;
     }
 
+    public BigDecimal getSalaire() {
+        return salaire;
+    }
+
+    public void setSalaire(BigDecimal salaire) {
+        this.salaire = salaire;
+    }
+
     public ArrayList<Animal> getAnimaux() {
         return animaux;
     }
@@ -57,6 +67,7 @@ public class Employe {
                 "nom='" + nom + '\'' +
                 ", prenom='" + prenom + '\'' +
                 ", matricule=" + matricule +
+                ", salaire=" + salaire +
                 ", animaux=" + animaux +
                 '}';
     }
