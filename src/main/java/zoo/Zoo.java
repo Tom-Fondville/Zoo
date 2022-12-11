@@ -75,6 +75,16 @@ public class Zoo {
         return roi;
     }
 
+    public boolean ajouterEmploye(Employe employe){
+        return this.employes.add(employe);
+    }
+    public boolean ajouterClient(Client client){
+        return this.clients.add(client);
+    }
+
+    public boolean ajouterInfrastructure(Infrastructure infrastructure){
+        return this.infrastructures.add(infrastructure);
+    }
 
 
 
