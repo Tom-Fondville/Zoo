@@ -1,6 +1,9 @@
-package zoo;
+package zoo.Animaux;
 
-public class Animal {
+import zoo.Infrastructure;
+import zoo.Vulnerabilite;
+
+public abstract class Animal {
     private String nom;
 
     private String nomScientifique;

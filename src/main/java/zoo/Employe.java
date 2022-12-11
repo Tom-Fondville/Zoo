@@ -1,5 +1,7 @@
 package zoo;
 
+import zoo.Animaux.Animal;
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
@@ -58,6 +60,10 @@ public class Employe {
 
     public void setAnimaux(ArrayList<Animal> animaux) {
         this.animaux = animaux;
+    }
+
+    public boolean ajouterAnimal(Animal animal){
+        return this.animaux.add(animal);
     }
 
 

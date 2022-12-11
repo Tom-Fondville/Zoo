@@ -1,5 +1,7 @@
 package zoo;
 
+import zoo.Animaux.Animal;
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
