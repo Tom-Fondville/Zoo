@@ -54,6 +54,10 @@ public class Client {
         this.infrastructureVisitee = infrastructureVisitee;
     }
 
+    public boolean addVisite(Infrastructure infrastructure){
+        return this.infrastructureVisitee.add(infrastructure);
+    }
+
 
     @Override
     public String toString() {
